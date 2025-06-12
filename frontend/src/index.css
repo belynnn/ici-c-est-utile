@@ -79,7 +79,7 @@ button:hover {
 }
 
 .container {
-  width: 50%;
+  width: 100%;
   margin: auto;
   padding: 1rem;
 }
@@ -123,6 +123,6 @@ button:hover {
   }
 
   .leaflet-container {
-    height: 70vh;
+    height: 90vh;
   }
 }
