@@ -25,7 +25,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f8f8f8;
 }
 
 h1 {
@@ -75,6 +78,14 @@ button:hover {
   background-color: #0056b3;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -85,5 +96,24 @@ button:hover {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
   }
 }

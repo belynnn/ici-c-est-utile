@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Ici C'est Utile</h1>
       <MapView pois={filteredPOIs} />
 
