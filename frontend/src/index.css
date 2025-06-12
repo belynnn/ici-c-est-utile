@@ -86,7 +86,7 @@ button:hover {
 }
 
 .leaflet-container {
-  max-width: 100% !important;
+  width: 100vw;
   height: 60vh;
   margin: 0 auto;
   display: block;
