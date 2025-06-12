@@ -24,6 +24,7 @@ a:hover {
 
 body {
   margin: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -123,6 +124,6 @@ button:hover {
   }
 
   .leaflet-container {
-    height: 90vh;
+    height: 70vh;
   }
 }
