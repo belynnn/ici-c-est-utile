@@ -79,7 +79,7 @@ button:hover {
 }
 
 .container {
-  max-width: 1200px;
+  width: 50%;
   margin: auto;
   padding: 1rem;
 }
