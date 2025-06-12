@@ -31,7 +31,6 @@ function App() {
         <LoginForm onLogin={() => setLoggedIn(true)} />
         <RegisterForm />
       </>}
-      {loggedIn && <AddPoiForm refreshPOIs={refreshPOIs} />}
 
       {loggedIn && (
         <>

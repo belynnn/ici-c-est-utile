@@ -79,11 +79,16 @@ button:hover {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
   padding: 1rem;
+}
+
+.leaflet-container {
   width: 100%;
-  box-sizing: border-box;
+  height: 60vh; /* ou 100vh si tu veux qu'elle prenne tout l'écran */
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -115,5 +120,9 @@ button:hover {
 
   h1 {
     text-align: center;
+  }
+
+  .leaflet-container {
+    height: 70vh;
   }
 }
