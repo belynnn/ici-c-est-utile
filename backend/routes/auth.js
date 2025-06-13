@@ -23,7 +23,13 @@ router.post('/login', async (req, res) => {
   const match = await bcrypt.compare(password, user.password);
   if (!match) return res.status(400).json({ error: 'Mot de passe incorrect' });
 
-  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+  // Expiration
+  const token = jwt.sign(
+    { id: user._id, email: user.email },
+    process.env.JWT_SECRET,
+    { expiresIn: '7d' } // expire dans 7 jours
+  );
+
   res.json({ token });
 });
 
