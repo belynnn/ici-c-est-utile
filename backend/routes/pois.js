@@ -2,19 +2,6 @@ const router = express.Router();
 const verify = require('../middlewares/verify.js');
 const express = require('express');
 const POI = require('../models/POI');
-const jwt = require('jsonwebtoken');
-
-// Middleware d'auth
-const verify = (req, res, next) => {
-  const token = req.headers.authorization?.split(' ')[1];
-  if (!token) return res.status(401).json({ error: 'Non autorisé' });
-
-  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) return res.status(403).json({ error: 'Token invalide' });
-    req.user = decoded;
-    next();
-  });
-};
 
 // Lire tous les POIs
 router.get('/', async (req, res) => {
