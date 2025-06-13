@@ -1,6 +1,6 @@
+const express = require('express');
 const router = express.Router();
 const verify = require('../middlewares/verify.js');
-const express = require('express');
 const POI = require('../models/POI');
 
 // Lire tous les POIs
