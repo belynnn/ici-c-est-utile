@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 
-export default function verify(req, res, next) {
+function verify(req, res, next) {
   const authHeader = req.headers.authorization;
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -10,10 +10,12 @@ export default function verify(req, res, next) {
   const token = authHeader.split(' ')[1];
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET); // assure-toi que JWT_SECRET est bien dans ton .env
-    req.user = decoded; // contient par exemple : { id, email }
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded;
     next();
   } catch (err) {
     return res.status(403).json({ message: 'Token invalide ou expiré' });
   }
 }
+
+module.exports = verify;
