@@ -1,6 +1,5 @@
-import verify from '../middlewares/verify.js';
-
 const router = express.Router();
+const verify = require('../middlewares/verify.js');
 const express = require('express');
 const POI = require('../models/POI');
 const jwt = require('jsonwebtoken');
