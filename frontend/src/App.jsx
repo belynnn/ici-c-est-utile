@@ -14,8 +14,13 @@ function App() {
   const types = [...new Set(pois.map(p => p.type))]; // liste unique
 
   async function refreshPOIs() {
-    const res = await getPOIs();
-    setPOIs(res.data);
+    try {
+      const res = await getPOIs();
+      console.log("Données reçues du backend:", res.data);
+      setPOIs(res.data);
+    } catch (err) {
+      console.error("Erreur lors du fetch POIs:", err);
+    }
   }
 
   useEffect(() => {
