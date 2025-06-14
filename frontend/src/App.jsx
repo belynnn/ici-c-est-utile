@@ -23,16 +23,16 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
+    <main class="container">
       <h1>Ici C'est Utile</h1>
       <MapView pois={filteredPOIs} />
 
-      {!loggedIn && <>
+      {/* {!loggedIn && <>
         <LoginForm onLogin={() => setLoggedIn(true)} />
         <RegisterForm />
-      </>}
+      </>} */}
 
-      {loggedIn && (
+      {/* {loggedIn && (
         <>
           <button onClick={() => {
             localStorage.removeItem('token');
@@ -49,8 +49,8 @@ function App() {
           <option value="">Tous les types</option>
           {types.map((t, i) => <option key={i} value={t}>{t}</option>)}
         </select>
-      )}
-    </div>
+      )} */}
+    </main>
   );
 }
 

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -25,9 +31,6 @@ a:hover {
 body {
   margin: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   min-height: 100vh;
   background-color: #f8f8f8;
 }
@@ -35,6 +38,23 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: .5em 0 1em 0;
+}
+
+.container {
+  width: 75vw;                                /* prend 75% de la largeur de la fenêtre */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.leaflet-container {
+  width: 100%;                                /* prend toute la largeur du parent */
+  height: 60vh;
+  margin: 1em auto;
+  background-color: #f0f0f0;
+  border: #ccc solid 1px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -79,18 +99,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-.container {
-  max-width: 75% !important;
-  margin: auto;
-  padding: 1rem;
-}
 
-.leaflet-container {
-  width: 100vw;
-  height: 60vh;
-  margin: 0 auto;
-  display: block;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
