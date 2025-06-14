@@ -29,6 +29,10 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Connexion à MongoDB Atlas réussie"))
   .catch(err => console.error('❌ Erreur MongoDB :', err));
 
+app.get('/', (req, res) => {
+  res.send('Backend opérationnel 🎉');
+});
+
 // Routes
 app.use('/api/pois', poisRoutes);
 
