@@ -8,9 +8,9 @@ export default function MapView({ pois }) {
     <MapContainer center={[50.8503, 4.3517]} zoom={12}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {pois.map((poi, i) => (
-        <Marker key={i} position={[Number(poi.lat), Number(poi.lng)]}>
+        <Marker key={poi._id} position={[poi.lat, poi.lng]}>
           <Popup>
-            <b>{poi.type}</b><br />
+            <b>{poi.name || poi.type}</b><br />
             {poi.description}
           </Popup>
         </Marker>
