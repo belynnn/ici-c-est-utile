@@ -5,6 +5,7 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const poisRoutes = require('./routes/pois');
 
 const app = express();
 app.use(cors());
@@ -17,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
-app.use('/api/pois', require('./routes/pois'));
+app.use('/api/pois', poisRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server started on port http://localhost:${PORT}`));

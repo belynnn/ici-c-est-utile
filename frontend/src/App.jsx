@@ -23,9 +23,10 @@ function App() {
   }, []);
 
   return (
-    <main class="container">
+    <main className="container">
       <h1>Ici C'est Utile</h1>
-      <MapView pois={filteredPOIs} />
+      {/* <MapView pois={filteredPOIs} /> */}
+      <MapView pois={pois} />
 
       {/* {!loggedIn && <>
         <LoginForm onLogin={() => setLoggedIn(true)} />
