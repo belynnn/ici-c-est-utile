@@ -28,10 +28,46 @@ function App() {
   }, []);
 
   return (
-    <main className="container">
-      <h1>Ici C'est Utile</h1>
-      {/* <MapView pois={filteredPOIs} /> */}
+    <main className='container'>
+      <div className='sidebar'>
+        <div>
+          <h1><a href="#"><span>ICI C'EST</span><br />UTILE</a></h1>
+        </div>
+
+        <div>
+          <div className='search'>
+            <input type="search" name="search" id="search" placeholder="banc, défibrillateur, ..." />
+            <input type="submit" value="🔍" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div>
+          <h2>Catégories</h2>
+          <div className='categories'>
+            <ul>
+              <li><a href="#"><span>❤️ </span>Santé</a></li>
+              <li><a href="#"><span>👥 </span>Familles</a></li>
+              <li><a href="#"><span>🐾 </span>Animaux</a></li>
+              <li><a href="#"><span>🆓 </span>Solidaire</a></li>
+              <li><a href="#"><span>🌱 </span>Ecologie</a></li>
+              <li><a href="#"><span>🧭 </span>Citoyenneté</a></li>
+              <li><a href="#"><span>♿️ </span>Accessibilité</a></li>
+              <li><a href="#"><span>🚶 </span>Transport</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div className='credits'>
+          Développé avec 🧡 par Deborah Clerckx
+        </div>
+      </div>
       <MapView pois={pois} />
+
+      {/* <MapView pois={filteredPOIs} /> */}
 
       {/* {!loggedIn && <>
         <LoginForm onLogin={() => setLoggedIn(true)} />
