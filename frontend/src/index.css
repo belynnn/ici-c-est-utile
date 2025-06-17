@@ -38,44 +38,44 @@ body {
 
 h1 {
   color: #cc720b;
-  line-height: 1;
-  font-size: 5rem;
+  line-height: .8;
+  font-size: 6.45rem;
   text-align: left !important;
   margin: -1.9rem 0 .5rem 0;
 }
 h1>a>span{
   color: #473621;
-  font-size: 2.5rem;
+  font-size: 3.79rem;
 }
 h1>a:hover{
   color: #cc720b;
 }
 
-ul {
+.categories>ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-li {
-  margin: 1.5rem 0;
+.categories>ul>li {
+  margin: .5rem 0;
 }
-li>a {
+.categories>ul>li>button {
+  color: #cc720b;
+  text-align: left;
   font-weight: 500;
   background-color: none;
   padding: .5rem 1.25rem .5em 1rem;
   border-radius: 10px;
 }
-li>a:hover {
+.categories>ul>li>button:hover {
   background-color: #fff7ee;
-  color: #cc720b;
 }
-li>a:focus {
+.categories>ul>li>button:focus {
   background-color: #fff7ee;
-  color: #cc720b;
   outline: 2px solid #cc720b;
   outline-offset: 2px;
 }
-li>a>span {
+.categories>ul>li>button>span {
   margin-right: .5em;
 }
 

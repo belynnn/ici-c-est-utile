@@ -47,14 +47,15 @@ function App() {
           <h2>Catégories</h2>
           <div className='categories'>
             <ul>
-              <li><a href="#"><span>❤️ </span>Santé</a></li>
-              <li><a href="#"><span>👥 </span>Familles</a></li>
-              <li><a href="#"><span>🐾 </span>Animaux</a></li>
-              <li><a href="#"><span>🆓 </span>Solidaire</a></li>
-              <li><a href="#"><span>🌱 </span>Ecologie</a></li>
-              <li><a href="#"><span>🧭 </span>Citoyenneté</a></li>
-              <li><a href="#"><span>♿️ </span>Accessibilité</a></li>
-              <li><a href="#"><span>🚶 </span>Transport</a></li>
+              <li><button onClick={() => setFilter('santé')}><span>❤️ </span>Santé</button></li>
+              <li><button onClick={() => setFilter('famille')}><span>👥 </span>Familles</button></li>
+              <li><button onClick={() => setFilter('animaux')}><span>🐾 </span>Animaux</button></li>
+              <li><button onClick={() => setFilter('solidaire')}><span>🆓 </span>Solidaire</button></li>
+              <li><button onClick={() => setFilter('écologie')}><span>🌱 </span>Écologie</button></li>
+              <li><button onClick={() => setFilter('culture')}><span>📚 </span>Culture</button></li>
+              <li><button onClick={() => setFilter('accessibilité')}><span>♿️ </span>Accessibilité</button></li>
+              <li><button onClick={() => setFilter('mobilité')}><span>🚶 </span>Mobilité</button></li>
+              <li><button onClick={() => setFilter('conseiller_numérique')}><span>🤖 </span>Conseiller Numérique</button></li>
             </ul>
           </div>
         </div>
@@ -65,7 +66,7 @@ function App() {
           Développé avec 🧡 par Deborah Clerckx
         </div>
       </div>
-      <MapView pois={pois} />
+      <MapView pois={filteredPOIs} />
 
       {/* <MapView pois={filteredPOIs} /> */}
 
